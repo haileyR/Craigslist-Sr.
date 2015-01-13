@@ -5,8 +5,12 @@ class ListingsController < ApplicationController
     render :new, locals: {listing: listing, categories: categories}
   end
 
+  def show
+    listing = Listing.find(params[:id])
+    render :show, locals: {listing: listing}
+  end
+
   def create
-    p params[:category]
     listing = Category.find_by_title(params[:category]).listings.build(listing_params)
     if listing.save
       render :show, locals: {listing: listing}
