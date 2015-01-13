@@ -104,6 +104,12 @@ select{
   background: transparent;
 }
 
+p{
+  font-family: 'Abel', sans-serif;
+  margin: 20px;
+  color: #1c6551;
+}
+
 
 a {
   text-decoration: none;
