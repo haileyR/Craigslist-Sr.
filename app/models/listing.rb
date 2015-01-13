@@ -1,4 +1,5 @@
 class Listing < ActiveRecord::Base
+  belongs_to :category
   validates :owner_email, :title, presence: :true
   validates :edit_key, uniqueness: :true
   before_create :generate_edit_key
