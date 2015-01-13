@@ -14,9 +14,9 @@
  *= require_self
  */
 .container {
-  width: 90%;
+  width: 50%;
   height: 100%;
-  margin-left: 5%;
+  margin: 0 auto;
 }
 
 header{
