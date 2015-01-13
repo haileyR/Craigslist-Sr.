@@ -1,6 +1,7 @@
 <h1>Categories</h1>
+
 <ul>
   <% categories.each do |category| %>
-    <li><h2><%= link_to category.title, categories_path %></h2></li>
+    <li><h2><%= link_to category.title, category_path(category) %></h2></li>
   <% end %>
 </ul>
