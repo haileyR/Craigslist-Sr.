@@ -1,7 +1,11 @@
+<%= button_to 'Create Listing', new_listing_path, method: "get" %>
+
 <h1>Categories</h1>
+
 
 <ul>
   <% categories.each do |category| %>
     <li><h2><%= link_to category.title, category_path(category) %></h2></li>
   <% end %>
 </ul>
+
