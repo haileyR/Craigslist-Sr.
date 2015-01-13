@@ -1,0 +1,35 @@
+<%= form_for listing do |f| %>
+  <p>
+    Category: <% cat_array = categories.map {|c| c.title} %>
+    <%= select_tag(:category, options_for_select(cat_array) ) %>
+  </p>
+  <p>
+    <%= f.label "your email" %><br>
+    <%= f.text_field :owner_email %>
+  </p>
+
+  <p>
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </p>
+
+  <p>
+    <%= f.label :location %><br>
+    <%= f.text_field :location %>
+  </p>
+
+  <p>
+    <%= f.label :price %><br>
+    $ <%= f.text_field :price %>
+  </p>
+
+  <p>
+    <%= f.label :content %><br>
+    <%= f.text_area :content %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+
+<% end %>
