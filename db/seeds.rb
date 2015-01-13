@@ -1,4 +1,4 @@
-require 'faker'
+# require 'faker'
 
 10.times {Category.create(
   title: Faker::Lorem.word
